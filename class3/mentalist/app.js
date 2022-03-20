@@ -2,12 +2,14 @@ var numeroSecreto = parseInt(Math.random() * 11);
 
 function Chutar() {
     var chute = parseInt(document.getElementById("valor").value);
+    var elementoResultado = document.getElementById("resultado");
     console.log(chute);
+    
     if (chute == numeroSecreto) {
-        console.log("Acertou");
+        elementoResultado.innerHTML = "Você acertou!";
     } else if (chute > 10 || chute < 0) {
-        console.log("Escolha um número entre 0 e 10.");
+        elementoResultado.innerHTML = "Você deve digitar um número entre 0 e 10";
     } else {
-        console.log("Errou");
+        elementoResultado.innerHTML = "Você errou!";
     }
 }
