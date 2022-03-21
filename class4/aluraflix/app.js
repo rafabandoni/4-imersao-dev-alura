@@ -1,9 +1,29 @@
-var listaFilmes = [
-    "https://br.web.img2.acsta.net/pictures/19/07/23/20/57/4907896.jpg",
-    "https://images-na.ssl-images-amazon.com/images/I/91382RVTr3L.jpg",
-    "https://m.media-amazon.com/images/M/MV5BMjEwOTMzNjYzMl5BMl5BanBnXkFtZTcwNjczMTQyMQ@@._V1_FMjpg_UX1000_.jpg"
-];
+var listaFilmes = [];
 
-for (var i = 0; i < listaFilmes.length; i++) {
-    document.write("<img src=" + listaFilmes[i] + ">");
+function lista() {
+    var filme = document.getElementById("filmes").value;
+
+    do
+        listaFilmes.push(filme);
+    while (listaFilmes.length = 0)
+    for(var i = 0; i < listaFilmes; i++) {
+        for(var j = 0; j < listaFilmes; j++) {
+            if (i != j) {
+                if (listaFilmes[i] == listaFilmes[j]) {
+                    console.log("Filmes iguais.");
+                } else {
+                    listaFilmes.push(filmes);
+                }
+            }
+        }
+    }
+    for (var i = 0; i < listaFilmes.length; i++) {
+        document.write("<img src=" + listaFilmes[i] + ">");
+    }
 }
+
+// escolher outro tema pra aparacer na página (escolhi albuns)
+// usar outras estruturas de loop como foreach e while
+// criar condição para não repetir informações
+// criar um campo e botão para adicionar a imagem pela tela e nao pelo código
+
