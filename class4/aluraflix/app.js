@@ -2,10 +2,8 @@ var listaFilmes = [];
 
 function lista() {
     var filme = document.getElementById("filmes").value;
+    listaFilmes.push(filme);
 
-    do
-        listaFilmes.push(filme);
-    while (listaFilmes.length = 0)
     for(var i = 0; i < listaFilmes; i++) {
         for(var j = 0; j < listaFilmes; j++) {
             if (i != j) {
@@ -18,7 +16,7 @@ function lista() {
         }
     }
     for (var i = 0; i < listaFilmes.length; i++) {
-        document.write("<img src=" + listaFilmes[i] + ">");
+        document.write("<img src=" + listaFilmes[i] + ">"); // precisa colocar dentro de uma tag html
     }
 }
 
