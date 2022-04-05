@@ -1,21 +1,19 @@
 var listaFilmes = [];
-var check = 0;
 
 function Lista() {
     var filme = document.getElementById("filme").value;
     listaFilmes.push(filme);
+    var ultimoItemNumero = listaFilmes.length - 1;
+    var check = 0;
 
     if(listaFilmes.length > 1) {
         for(var i = 0; i < listaFilmes.length; i++) {
-            for(var j = 0; j < listaFilmes.length; j++) {
-                if(listaFilmes[listaFilmes.length-1] == listaFilmes[i - 1]) {
-                    console.error("Filme repetido.");
-                    alert("Filme repetido");
-                    listaFilmes.pop()
-                    check = 1;
-                }
-            }
-            if(check != 1) {
+            if(listaFilmes[listaFilmes.length-1] == listaFilmes[i - 1]) {
+                console.error("Filme repetido.");
+                alert("Filme repetido");
+                listaFilmes.pop()
+                check = 1;
+            } else if(i == ultimoItemNumero && check == 0) {
                 listarFilmesNaTela(filme);
                 check = 0;
             }
